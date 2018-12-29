@@ -25,5 +25,24 @@ class CSRFController extends Controller
     public function html_csrf(Request $request) {
         dump($request->all());
     }
-    
+
+    /**
+     * 導向ajax_csrf頁面
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function view_ajax_csrf() {
+        return view('ajax_csrf');
+    }
+
+    /**
+     * 如果post有過就return input的值
+     *
+     * @param Request $request
+     * @return string
+     */
+    public function ajax_csrf(Request $request) {
+        return 'get data = '.$request->get('input_value');
+    }
+
 }

@@ -23,3 +23,11 @@ Route::get('/', function () {
 */
 Route::get('html_csrf', 'CSRFController@view_html_csrf');
 Route::post('html_csrf', 'CSRFController@html_csrf');
+
+/*
+|--------------------------------------------------------------------------
+| CSRF保護 ajax 版本
+|--------------------------------------------------------------------------
+*/
+Route::get('ajax_csrf', 'CSRFController@view_ajax_csrf');
+Route::post('ajax_csrf', 'CSRFController@ajax_csrf');

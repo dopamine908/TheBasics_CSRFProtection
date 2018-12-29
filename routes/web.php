@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+/*
+|--------------------------------------------------------------------------
+| CSRF保護 form 表單版本
+|--------------------------------------------------------------------------
+*/
+Route::get('html_csrf', 'CSRFController@view_html_csrf');
+Route::post('html_csrf', 'CSRFController@html_csrf');

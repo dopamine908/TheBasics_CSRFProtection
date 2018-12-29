@@ -45,4 +45,22 @@ class CSRFController extends Controller
         return 'get data = '.$request->get('input_value');
     }
 
+    /**
+     * 導向except_csrf頁面
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function view_except_csrf() {
+        return view('except_csrf');
+    }
+
+    /**
+     * 如果post有過就顯示input的值
+     * 
+     * @param Request $request
+     */
+    public function except_csrf(Request $request) {
+        dump($request->all());
+    }
+
 }

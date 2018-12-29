@@ -31,3 +31,11 @@ Route::post('html_csrf', 'CSRFController@html_csrf');
 */
 Route::get('ajax_csrf', 'CSRFController@view_ajax_csrf');
 Route::post('ajax_csrf', 'CSRFController@ajax_csrf');
+
+/*
+|--------------------------------------------------------------------------
+| 將uri排除CSRF保護
+|--------------------------------------------------------------------------
+*/
+Route::get('except_csrf', 'CSRFController@view_except_csrf');
+Route::post('except_csrf', 'CSRFController@except_csrf');
